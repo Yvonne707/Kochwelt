@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.header-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+
+.header-logo img{
+    height: 80px;
+}
+.header-menu {
+  
+}
+
+.header-menu a{
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+
+}
+
+.site-description {
+    
+}
+.croissant1 {
+    height: 150px;
+    width: 150px;
+}
