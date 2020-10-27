@@ -70,17 +70,15 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     padding: 16px;
 }
 
-.description-text-container a{
-    background-color: rgb(9, 172, 9);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 48px;
-    padding-right: 48px;
-    text-decoration: none;
+.recipe-btn {
+    width: 300px;
+    background-color: green;
+    border-radius: 5px;
+    height: 40px;
     color: white;
-    width: 130px;
-    text-align: center;
-    }
+    font-size: 15px;
+}
+
 
 .content1 {
     padding: 16px;
@@ -170,38 +168,27 @@ background-color: rgb(41, 41, 41)
     justify-content: left;
     padding-left: 6%;
     padding-right: 6%;
-    padding-bottom: 40px;
+    padding-bottom: 70;
     box-shadow: 0px 1px 1px lightgrey;
-    margin-top: -62px;
 
 }
 
 .icons {
     display: flex;
-    background-color: #f2f2f2;
+    flex-direction: column;
+    background-color: lightgray; 
     border-radius: 10px;
     margin: 8;
-    padding-left: 6px;
-    padding-right: 6px;
-    align-items: center;
-    height: 36px;
+    padding: 5;
 }
 
 
-.recipe-ingredients a{
-    background-color: rgb(9, 172, 9);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 48px;
-    padding-right: 48px;
-    text-decoration: none;
+.portions-btn {
+    width: 150px;
+    background-color: green;
+    height: 40px;
     color: white;
-    width: 130px;
-    text-align: center;
-}
-.recipe-ingredients a:hover{
-background-color:  rgb(20, 196, 20);
-cursor: pointer;
+    font-size: 15px;
 }
 
 .input {
@@ -209,25 +196,7 @@ cursor: pointer;
     height: 40px;
 }
 
-.table tr:nth-child(even){
-    background-color: #f2f2f2;
-}
-.table td{
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    border-radius: 10px;
-}
-
-.table {
-width: 100%;
-font-size: 20px;
-border-collapse: separate;
-
-}
-
 .recipe-method-title {
-    margin-top: 370px;
     padding-left: 6%;
     padding-right: 6%;
 }
@@ -240,6 +209,7 @@ border-collapse: separate;
 
 .method-attributes {
     display: flex;
+    justify-content: left;
     padding-left: 6%;
     padding-right: 6%;
 }
@@ -250,23 +220,8 @@ border-collapse: separate;
     padding-right: 6%; 
 }
 
-.profile img{
+.profile {
     object-fit: cover;
     height: 60px;
     width: 60px;
-    border-radius: 100%;
-  
-}
-.profile {
-    display: flex;
-    align-items: center;
-}
-.profile p{
-padding-left: 26px;
-}
-
-.icons img {
-    height: 20px;
-    width: 20px;
-    padding-right: 5px;
 }
