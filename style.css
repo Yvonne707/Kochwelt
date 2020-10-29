@@ -3,7 +3,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.header-container{
+.header-container {
     padding-top: 16px;
     padding-left: 76px;
     padding-right: 76px;
@@ -12,20 +12,23 @@ body {
     box-shadow: 0px 2px 2px lightgray;
 }
 
-.header-logo img{
+.header-logo img {
     height: 80px;
 }
+
 .header-menu {
-display: flex;
-flex-direction:row;  /* Menü in Reihe anzeigen */
+    display: flex;
+    flex-direction: row;
+    /* Menü in Reihe anzeigen */
 }
 
-.header-menu a{
+.header-menu a {
     margin-right: 8px;
     text-decoration: none;
     color: black;
     display: flex;
-    align-self: flex-end; /* Menü auf Linie anzeigen */
+    align-self: flex-end;
+    /* Menü auf Linie anzeigen */
     padding-bottom: 5px;
     border-bottom: 4px solid transparent;
     /* nicht springen */
@@ -33,26 +36,23 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     /* für beide Klassen!*/
     font-weight: 500;
     font-size: 20px;
-   
 }
 
-.header-menu a:hover{
+.header-menu a:hover {
     border-bottom: 4px solid green;
     transition: all 225ms ease-in-out;
     color: green;
     padding-bottom: 5px;
-
 }
 
 .site-description {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 16px;
-  padding-left: 76px;
- padding-right: 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px;
+    padding-left: 76px;
+    padding-right: 76px;
 }
-
 
 .description-img-container img {
     height: 200px;
@@ -60,6 +60,7 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     object-fit: cover;
     border-radius: 10px;
 }
+
 .description-img-container {
     padding: 16px;
 }
@@ -70,7 +71,7 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     padding: 16px;
 }
 
-.description-text-container a{
+.description-text-container a {
     background-color: rgb(9, 172, 9);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -80,7 +81,7 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     color: white;
     width: 130px;
     text-align: center;
-    }
+}
 
 .content1 {
     padding: 16px;
@@ -93,10 +94,11 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
 .content1-title {
     justify-content: center;
     display: flex;
-   background-color: lightgray;
-   padding: 16px !important;
-   margin-bottom: -60px;
+    background-color: lightgray;
+    padding: 16px !important;
+    margin-bottom: -60px;
 }
+
 .content1-element {
     margin-left: 40;
     margin-right: 40;
@@ -112,11 +114,13 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     object-fit: cover;
     border-radius: 10px;
 }
+
 .content2-title {
     justify-content: center;
     display: flex;
-   padding: 16px !important;
+    padding: 16px !important;
 }
+
 .content2 {
     display: flex;
     justify-content: space-between;
@@ -124,6 +128,7 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     padding-right: 7%;
     padding-bottom: 16px;
 }
+
 .content2 p {
     padding-right: 30px;
 }
@@ -133,16 +138,14 @@ flex-direction:row;  /* Menü in Reihe anzeigen */
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-} 
+}
+
 .footer-container {
     height: 200px;
-   
-
-background-color: rgb(41, 41, 41)
+    background-color: rgb(41, 41, 41)
 }
 
 /* ++++++++ Recipe.html ++++++ */
-
 
 .recipe-title {
     padding-left: 6%;
@@ -151,7 +154,8 @@ background-color: rgb(41, 41, 41)
     height: 300;
     margin-bottom: -40;
 }
-.recipe-title img{
+
+.recipe-title img {
     height: 150px;
     object-fit: cover;
     width: 100%;
@@ -162,10 +166,10 @@ background-color: rgb(41, 41, 41)
     padding-left: 6%;
     padding-right: 6%;
     padding-top: 30;
-    height: 300; 
+    height: 300;
 }
 
-.recipe-attributes{
+.recipe-attributes {
     display: flex;
     justify-content: left;
     padding-left: 6%;
@@ -173,7 +177,6 @@ background-color: rgb(41, 41, 41)
     padding-bottom: 40px;
     box-shadow: 0px 1px 1px lightgrey;
     margin-top: -62px;
-
 }
 
 .icons {
@@ -187,8 +190,7 @@ background-color: rgb(41, 41, 41)
     height: 36px;
 }
 
-
-.recipe-ingredients a{
+.recipe-ingredients a {
     background-color: rgb(9, 172, 9);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -199,9 +201,10 @@ background-color: rgb(41, 41, 41)
     width: 130px;
     text-align: center;
 }
-.recipe-ingredients a:hover{
-background-color:  rgb(20, 196, 20);
-cursor: pointer;
+
+.recipe-ingredients a:hover {
+    background-color: rgb(20, 196, 20);
+    cursor: pointer;
 }
 
 .input {
@@ -209,10 +212,11 @@ cursor: pointer;
     height: 40px;
 }
 
-.table tr:nth-child(even){
+.table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-.table td{
+
+.table td {
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
@@ -220,10 +224,9 @@ cursor: pointer;
 }
 
 .table {
-width: 100%;
-font-size: 20px;
-border-collapse: separate;
-
+    width: 100%;
+    font-size: 20px;
+    border-collapse: separate;
 }
 
 .recipe-method-title {
@@ -235,7 +238,7 @@ border-collapse: separate;
 .recipe-method {
     height: 250px;
     padding-left: 6%;
-    padding-right: 6%;  
+    padding-right: 6%;
 }
 
 .method-attributes {
@@ -247,22 +250,23 @@ border-collapse: separate;
 .recipe-description {
     height: 300px;
     padding-left: 6%;
-    padding-right: 6%; 
+    padding-right: 6%;
 }
 
-.profile img{
+.profile img {
     object-fit: cover;
     height: 60px;
     width: 60px;
     border-radius: 100%;
-  
 }
+
 .profile {
     display: flex;
     align-items: center;
 }
-.profile p{
-padding-left: 26px;
+
+.profile p {
+    padding-left: 26px;
 }
 
 .icons img {
@@ -271,3 +275,62 @@ padding-left: 26px;
     padding-right: 5px;
 }
 
+@media (max-width: 1000px) {
+    h2 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .header-menu {
+        display: none;
+    }
+    .site-description {
+        display: flex;
+        flex-direction: column;
+        padding-left: 13px;
+        padding-right: 16px;
+    }
+    .description-text-container {
+        align-items: center;
+    }
+    .d-none {
+        display: none;
+    }
+
+    .content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 16px;
+    }
+    .ingredients-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+
+    }
+
+    .input {
+        font-size: 21px;
+        padding-bottom: 21px;
+        margin-bottom: 10px;
+    }
+
+    .recipe-method-title {
+        margin-top: 473px;
+    }
+
+
+    .ingredients-mobile a{
+        margin-bottom: 16px;
+    }
+
+    .recipe-description {
+        margin-bottom: 150px;
+    }
+}
