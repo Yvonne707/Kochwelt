@@ -11,23 +11,41 @@
 </head>
 
 
-<body>
+<body onload="loadRecipe(1)">
 
 
     <div class="header-container">
         <div class="header-logo">
             <img src="./logo.png">
         </div>
+<!--Responsive Menu-->
+        <img  onclick="showMenu()" class="menu-mobile" src="./img/icons/bars-solid.svg">
+        <div id="menu" class="overlay-menu">
+            <a onclick="hideMenu()" href="./index.html"> Start </a>
+            <a onclick="hideMenu()" href="./recipe.html"> Rezept des Tages </a>
+            <a onclick="hideMenu()" href="#"> Kontakt </a>
+            <a onclick="hideMenu()" href="#"> Impressum </a>
+            <a onclick="loadRecipe(0)" href="#">Griechscher Bauernsalat</a>
+            <a onclick="loadRecipe(1)" href="#">Französische Coissants</a>
+            <a onclick="loadRecipe(2)" href="#">Rumänische Bohnensuppe</a>
+
+            <button class="close-button" onclick="hideMenu()">Close</button>
+        </div>
+<!--End of Responsive Menu-->
+
         <div class="header-menu">
             <a href="./index.html"> Start </a>
             <a href="./recipe.html"> Rezept des Tages </a>
             <a href="#"> Kontakt </a>
             <a href="#"> Impressum </a>
+            <a onclick="loadRecipe(0)" href="#">Griechscher Bauernsalat</a>
+            <a onclick="loadRecipe(1)" href="#">Französische Coissants</a>
+            <a onclick="loadRecipe(2)" href="#">Rumänische Bohnensuppe</a>
 
         </div>
     </div>
     <div class="recipe-title">
-        <h2> <b> Griechischer Bauernsalat </b></h2>
+        <h2 id="headline"> <b> Griechischer Bauernsalat </b></h2>
         <img src="./img/salad.jpg">
     </div>
 
@@ -45,41 +63,42 @@
         </div>
     </div>
 
-
+    
     <div class="recipe-ingredients ingredients-mobile">
-       <p>Zutaten für</p>  <input class="input" id="portions" type="number"> </input> <a onclick="show()"> Portionen</a>
-        <table class="table" id="table">
-            <tr>
-                <td>1 Salatgurke</td>
-            </tr>
-            <tr>
-                <td>2 Paprikaschotin</td>
-            </tr>
-            <tr>
-                <td><span id="tomatos"></span>g Tomate(n)</td>
-            </tr>
-            <tr>
-                <td>2 Zwiebel(n)</td>
-            </tr>
-            <tr>
-                <td>200g Schafskäse(n)</td>
-            </tr>
-            <tr>
-                <td>1 Glas Oliven, schwarze, ca. 1000g</td>
-            </tr>
-            <tr>
-                <td> Salz und Pfeffer </td>
-            </tr>
-            <tr>
-                <td>1 Zitrone(n)</td>
-            </tr>
-            <tr>
-                <td>125ml Olivenöl</td>
-            </tr>
-            <tr>
-                <td>Oregano</td>
-            </tr>
-        </table>
+       <p>Zutaten für</p>  <input class="input" id="portions" type="number"> </input> <a id="setPortionsId"> Portionen</a>
+       <table class="table" id="table">
+        <tr>
+            
+            <td id="0"></td>
+        </tr>
+        <tr>
+            <td id="1"></td>
+        </tr>
+        <tr>
+            <td id="2"></td>
+        </tr>
+        <tr>
+            <td id="3"></td>
+        </tr>
+        <tr>
+            <td id="4"></td>
+        </tr>
+        <tr>
+            <td id="5"></td>
+        </tr>
+        <tr>
+            <td id="6"></td>
+        </tr>
+        <tr>
+            <td id="7"></td>
+        </tr>
+        <tr>
+            <td id="8"></td>
+        </tr>
+        <tr>
+            <td id="9"></td>
+        </tr>
+    </table>
 
     </div>
 
