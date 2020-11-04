@@ -114,6 +114,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    cursor: pointer;
 }
 
 .content1-pic {
@@ -170,11 +171,32 @@ body {
     border-radius: 10px;
 }
 
+.more-recipes {
+    padding-left: 6%;
+    padding-top: 16px;
+}
+
+.more-recipes a {
+    text-decoration: none;
+    color: black;
+    margin-right: 16px;
+    border-bottom: 4px solid transparent;
+    transition: all 225ms ease-in-out;
+    padding-bottom: 5px;
+}
+
+.more-recipes a:hover {
+    border-bottom: 4px solid green;
+    transition: all 225ms ease-in-out;
+    color: green;
+    padding-bottom: 5px;
+}
+
 .recipe-ingredients {
     padding-left: 6%;
     padding-right: 6%;
     padding-top: 30;
-    height: 300;
+    height: 100;
 }
 
 .recipe-attributes {
@@ -220,6 +242,11 @@ body {
     height: 40px;
 }
 
+.table-div {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
 .table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -238,7 +265,6 @@ body {
 }
 
 .recipe-method-title {
-    margin-top: 370px;
     padding-left: 6%;
     padding-right: 6%;
 }
@@ -287,11 +313,12 @@ body {
     body {
         overflow-x: hidden!important;
     }
-
+    .more-recipes {
+        display: none;
+    }
     .header-logo img {
         margin-left: -50px;
     }
-
     .menu-mobile {
         display: flex;
         position: absolute;
@@ -329,9 +356,8 @@ body {
         background-color: rgb(204, 43, 43);
     }
     .show-overlay-menu {
-       transform: translateX(0);
+        transform: translateX(0);
     }
-
     h2 {
         text-align: center;
         font-size: 1.5em;
@@ -342,6 +368,9 @@ body {
     }
     .header-menu {
         display: none;
+    }
+    .recipe-attributes {
+        padding-top: 16px;
     }
     .site-description {
         display: flex;
@@ -355,37 +384,28 @@ body {
     .d-none {
         display: none;
     }
-
-    .content2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 28px;
-    padding-right: 16px;
-    }
-    .ingredients-mobile {
+    .content2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8px;
-
+        padding-left: 28px;
+        padding-right: 16px;
     }
-
+    .ingredients-mobile {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
     .input {
         font-size: 21px;
         padding-bottom: 21px;
         margin-bottom: 10px;
     }
-
-    .recipe-method-title {
-        margin-top: 473px;
-    }
-
-
-    .ingredients-mobile a{
+    .ingredients-mobile a {
         margin-bottom: 16px;
     }
-
     .recipe-description {
         margin-bottom: 150px;
     }
