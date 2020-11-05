@@ -64,12 +64,6 @@ let cousines = [{
 }
 ];
 
-function redirectToRecipe(id) {
-    
-    window.location.href = "./recipe.html";
-    document.getElementById('body').setAttribute('onload', 'loadRecipe(' + id + ')');
-}
-
 // ++++++++++ New Cleaner and efficient code +++++++++++++ //
 function loadRecipe(id) {
 
@@ -93,25 +87,7 @@ function loadRecipe(id) {
     document.getElementById('table').insertAdjacentHTML('beforeEnd', myHTMLCode); // Insert into table
 }
 
-/*++++++++++ Old Code +++++++++++++
-function loadRecipe(id) {
-    
-    document.getElementById('setPortionsId').setAttribute('onclick', 'calculatePortions('+ id +')')
-    hideMenu();
-    for (i = 0; i < 10; i++) {
-        document.getElementById(i).innerHTML = '<span id="amount' + i +'">' + cousines[id].ingredients[i].amount + '</span>' + cousines[id].ingredients[i].name;
-    }
-    
-}
 
-function calculatePortions(id) {
-    let portions = +document.getElementById('portions').value;
-    for (i=0; i < 10; i++){
-        document.getElementById('amount'+ i).innerHTML = cousines[id].ingredients[i].amount * portions;
-    
-    }
-}
-*/
 // Mobile Menu Show and Hide functions
 function showMenu() {
 
