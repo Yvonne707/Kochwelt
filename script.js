@@ -30,39 +30,63 @@ let cousines = [{
     ]
 },
 {
-    'name': 'Rumänische Bohnensuppe', 'ingredients': [
-
-
-        { 'name': ' Salatgurke', 'amount': 1 },
+    'name': 'Rumänische Bohnensuppe mit Schinken', 'ingredients': [
+        { 'name': ' kg Bohnen mit großem Korn', 'amount': 1 },
         { 'name': ' Salz und Pfeffer', 'amount': '' },
-        { 'name': ' Paprikaschotin', 'amount': 1 },
-        { 'name': ' g Tomate(n)', 'amount': 125 },
-        { 'name': ' ml Olivenöl', 'amount': 125 },
-        { 'name': ' Zwiebel(n)', 'amount': 2 },
-        { 'name': ' Glas Oliven(ca. 1000g), schwarze', 'amount': 1 },
-        { 'name': ' Zitrone(n)', 'amount': 1 },
-        { 'name': ' Oregano', 'amount': '' }
-
+        { 'name': ' kg geräucherte Rippen', 'amount': 1 },
+        { 'name': ' große getrocknete Zwiebel', 'amount': 1 },
+        { 'name': ' Karotte', 'amount': 1 },
+        { 'name': ' Dose Tomatenwürfel', 'amount': 1 },
+        { 'name': ' Esslöffel Tomatenmark', 'amount': 3 },
+        { 'name': ' Lorbeerblätter, Pfeffer, Salz', 'amount': '' },
+        { 'name': ' Öl', 'amount': '' },
+        { 'name': ' Thymian und getrockneter Dill', 'amount': '' }
+    ]
+},
+{
+    'name': 'Wok-Gemüse mit Kokossosse und Erdnüssen', 'ingredients': [
+        { 'name': ' TL Reisessig', 'amount': 2 },
+        { 'name': ' TL Sesamöl', 'amount': 2 },
+        { 'name': ' TL Sojasauce', 'amount': 4 },
+        { 'name': ' TL Hoisin-Sauce', 'amount': 1 },
+        { 'name': ' TL Rohrzucker', 'amount': 2 },
+        { 'name': ' TL Knoblauchpulver', 'amount': 2 },
+        { 'name': ' TL Ingwer, gemahlen', 'amount': 2 },
+        { 'name': ' Gramm asiatische Ramen-Nudeln (oder andere asiatische Nudeln)', 'amount': 500 },
+        { 'name': ' TL Olivenöl', 'amount': 2 },
+        { 'name': ' Knoblauchzehe, geschnitten', 'amount': 1 },
+        { 'name': ' TL Ingwer, gemahlen', 'amount': 1 },
+        { 'name': ' Gramm Shiitake-Pilze, in Scheiben geschnitten', 'amount': 90 },
+        { 'name': ' kleiner Brokoli, in Röschen geschnitten', 'amount': 1 },
+        { 'name': ' Möhre, in feine Streifen geschnitten', 'amount': 1 },
+        { 'name': ' TL Koriander, gehackt', 'amount': 1 }
     ]
 }
 ];
 
-function loadRecipe(id) { //Warum Id in der Klammer, auf was bezieht sich id?
-    document.getElementById('headline').innerHTML = cousines[id].name; // warum id?
-    document.getElementById('setPortionsId').setAttribute('onclick', 'calculatePortions('+ id +')')
-    hideMenu();
-    for (i = 0; i < 10; i++) {
-        document.getElementById(i).innerHTML = '<span id="amount' + i +'">' + cousines[id].ingredients[i].amount + '</span>' + cousines[id].ingredients[i].name;
+// ++++++++++ New Cleaner and efficient code +++++++++++++ //
+function loadRecipe(id) {
+
+    let recipe = cousines[id];
+    let portions = +document.getElementById('portions').value;
+    let myHTMLCode = '';
+
+    document.getElementById('headline').innerHTML = cousines[id].name;
+    document.getElementById('headline-img').setAttribute('src', './img/' + id + '.jpg');
+    document.getElementById('setPortionsId').setAttribute('onclick', 'loadRecipe(' + id + ')');
+    document.getElementById('table').innerHTML = '';
+
+    for (let i = 0; i < recipe.ingredients.length; i++) {
+        if (recipe.ingredients[i].amount != '') {
+            myHTMLCode += `<tr><td>${recipe.ingredients[i].amount * portions} ${recipe.ingredients[i].name}</td></tr>`;
+        } else {
+            myHTMLCode += `<tr><td>${recipe.ingredients[i].amount} ${recipe.ingredients[i].name}</td></tr>`;
+        }
     }
+
+    document.getElementById('table').insertAdjacentHTML('beforeEnd', myHTMLCode); // Insert into table
 }
 
-function calculatePortions(id) {
-    let portions = +document.getElementById('portions').value;
-    for (i=0; i < 10; i++){
-        document.getElementById('amount'+ i).innerHTML = cousines[id].ingredients[i].amount * portions;
-    
-    }
-}
 
 // Mobile Menu Show and Hide functions
 function showMenu() {

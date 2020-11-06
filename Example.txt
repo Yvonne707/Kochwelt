@@ -1,0 +1,33 @@
+// let myHTMLCode = '<tr><td>...</td></tr>'; // Beispiel
+
+function loadRecipe(id) {
+  let recipe = cusines[id];  
+  let portions = +document.getElementById('portions').value; // Input field
+
+
+  let myHTMLCode = '';
+  document.getElementById('table').innerHTML = '';
+  for(let i = 0; i < recipe.ingredients.length; i++) {
+      myHTMLCode += `<tr><td>${recipe.ingredients[i].amount *  portions} ${recipe.ingredients[i].name}</td></tr>`:
+  }
+  document.getElementById('table').insertAdjacentHTML('before', myHTMLCode); // Insert into table
+}
+
+
+<table id="table">
+ <!-- Generierter Code -->
+</table>
+
+
+template JSON
+
+ { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  },
+        { 'name': ' ', 'amount':  }
