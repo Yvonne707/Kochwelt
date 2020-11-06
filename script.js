@@ -31,6 +31,8 @@ let cousines = [{
 },
 {
     'name': 'Rumänische Bohnensuppe', 'ingredients': [
+
+
         { 'name': ' Salatgurke', 'amount': 1 },
         { 'name': ' Salz und Pfeffer', 'amount': '' },
         { 'name': ' Paprikaschotin', 'amount': 1 },
@@ -45,14 +47,13 @@ let cousines = [{
 }
 ];
 
-function loadRecipe(id) {
-    document.getElementById('headline').innerHTML = cousines[id].name;
+function loadRecipe(id) { //Warum Id in der Klammer, auf was bezieht sich id?
+    document.getElementById('headline').innerHTML = cousines[id].name; // warum id?
     document.getElementById('setPortionsId').setAttribute('onclick', 'calculatePortions('+ id +')')
     hideMenu();
     for (i = 0; i < 10; i++) {
         document.getElementById(i).innerHTML = '<span id="amount' + i +'">' + cousines[id].ingredients[i].amount + '</span>' + cousines[id].ingredients[i].name;
     }
-    
 }
 
 function calculatePortions(id) {
