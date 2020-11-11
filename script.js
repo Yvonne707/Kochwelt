@@ -1,6 +1,11 @@
 
 let cousines = [{
-    'name': 'Griechscher Bauernsalat', 'ingredients': [
+    'name': 'Griechscher Bauernsalat',
+    'description': `Gurke waschen und ungeschält in dünne Scheiben oder Stücke schneiden. Paprika waschen, entkernen und in
+    dünne Streifen schneiden.Tomaten waschen und achteln. Zwiebel schälen und in feine Ringe schneiden. Schafskäse würfeln und mit
+    Oregano bestreuen. Oliven abgießen und mit Gurke, Paprika, Tomaten, Zwiebeln und Schafskäse in eine Schüssel
+    geben. Olivenöl, Zitronensaft, Salz und Pfeffer zu einer Sauce verrühren und über den Salat gießen. Umrühren.` ,
+     'ingredients': [
         { 'name': ' Salatgurke', 'amount': 1 },
         { 'name': ' Paprikaschotin', 'amount': 1 },
         { 'name': ' g Tomate(n)', 'amount': 125 },
@@ -64,8 +69,16 @@ let cousines = [{
 }
 ];
 
+function init(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id') || 0;
+
+    loadRecipe(id);
+}
+
 // ++++++++++ New Cleaner and efficient code +++++++++++++ //
 function loadRecipe(id) {
+    
 
     let recipe = cousines[id];
     let portions = +document.getElementById('portions').value;
@@ -78,7 +91,7 @@ function loadRecipe(id) {
 
     for (let i = 0; i < recipe.ingredients.length; i++) {
         if (recipe.ingredients[i].amount != '') {
-            myHTMLCode += `<tr><td>${recipe.ingredients[i].amount * portions} ${recipe.ingredients[i].name}</td></tr>`;
+            myHTMLCode +=  `<tr><td>${recipe.ingredients[i].amount * portions} ${recipe.ingredients[i].name}</td></tr>`;
         } else {
             myHTMLCode += `<tr><td>${recipe.ingredients[i].amount} ${recipe.ingredients[i].name}</td></tr>`;
         }
