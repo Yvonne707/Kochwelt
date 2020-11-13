@@ -20,7 +20,7 @@ let cousines = [{
     ]
 },
 {
-    'name': 'Französische Coissants', 'ingredients': [
+    'name': 'Französische Coissants', 'description': '', 'ingredients': [
         { 'name': ' gr Frische Hefe', 'amount': 20 },
         { 'name': ' gr Zucker', 'amount': 15 },
         { 'name': ' gr Salz', 'amount': 15 },
@@ -35,7 +35,7 @@ let cousines = [{
     ]
 },
 {
-    'name': 'Rumänische Bohnensuppe mit Schinken', 'ingredients': [
+    'name': 'Rumänische Bohnensuppe mit Schinken', 'description': '', 'ingredients': [
         { 'name': ' kg Bohnen mit großem Korn', 'amount': 1 },
         { 'name': ' Salz und Pfeffer', 'amount': '' },
         { 'name': ' kg geräucherte Rippen', 'amount': 1 },
@@ -49,7 +49,7 @@ let cousines = [{
     ]
 },
 {
-    'name': 'Wok-Gemüse mit Kokossosse und Erdnüssen', 'ingredients': [
+    'name': 'Wok-Gemüse mit Kokossosse und Erdnüssen', 'description': '', 'ingredients': [
         { 'name': ' TL Reisessig', 'amount': 2 },
         { 'name': ' TL Sesamöl', 'amount': 2 },
         { 'name': ' TL Sojasauce', 'amount': 4 },
@@ -88,6 +88,7 @@ function loadRecipe(id) {
     document.getElementById('headline-img').setAttribute('src', './img/' + id + '.jpg');
     document.getElementById('setPortionsId').setAttribute('onclick', 'loadRecipe(' + id + ')');
     document.getElementById('table').innerHTML = '';
+    document.getElementById('recipe-description').innerHTML = cousines[id].description;
 
     for (let i = 0; i < recipe.ingredients.length; i++) {
         if (recipe.ingredients[i].amount != '') {

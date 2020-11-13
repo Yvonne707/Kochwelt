@@ -99,6 +99,11 @@ body {
     background-color: lightgray;
 }
 
+.content1 a {
+    text-decoration: none;
+    color: black;
+}
+
 .content1-title {
     justify-content: center;
     display: flex;
@@ -150,9 +155,33 @@ body {
 }
 
 .footer-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     height: 200px;
-    background-color: rgb(41, 41, 41)
+    background-color: rgb(41, 41, 41);
+    padding: 16px;
+    color: white;
+
 }
+.footer-links {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+.footer-links a {
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+}
+.footer-logo img {
+    filter: invert(1);
+    height: 80px;
+    color: white;
+}
+
+
 
 /* ++++++++ Recipe.html ++++++ */
 
@@ -410,3 +439,11 @@ body {
         margin-bottom: 150px;
     }
 }
+
+/* Impressum */
+
+.impressum-div {
+margin-left: 16px;
+padding-bottom: 16px;
+}
+
